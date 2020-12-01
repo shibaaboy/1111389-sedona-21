@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Форма отзыва</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page__body">
   <header class="page-header">
@@ -45,8 +46,8 @@
         <p class="intro-description__title">
           Оставьте свой отзыв
         </p>
-        <p class="intro-description__help">
-          Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
+        <p class="intro-description__text">
+          Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещенных вами достопримечательностях
         </p>
       </div>
     </section>
@@ -55,42 +56,42 @@
         <div class="person-form">
           <h2 class="person-form__title">Представьтесь:</h2>
             <label for="name-field">
-              <span>Имя*:</span>
-              <input type="text" name="name" id="name-field" class="name-form" placeholder="Петр" required>
+              <span class="contact-form__subitem">Имя*:</span>
+              <input type="text" name="name" id="name-field" class="name-form" value="Петр" required>
             </label>
             <label for="surname-field">
-              <span>Фамилия*:</span>
-              <input type="text" name="surname" id="surname-field" class="surname-form" placeholder="Иванов" required>
+              <span class="contact-form__subitem">Фамилия*:</span>
+              <input type="text" name="surname" id="surname-field" class="surname-form" value="Иванов" required>
             </label>
             <label for="middlename-field">
-              <span>Отчество</span>
-              <input type="text" name="middlename" id="middlename-field" class="middlename-form" placeholder="Александрович" required>
+              <span class="contact-form__subitem">Отчество</span>
+              <input type="text" name="middlename" id="middlename-field" class="middlename-form" value="Александрович" required>
             </label>
         </div>
         <div class="contact-form">
           <h2 class="contact-form__title">Контактная информация:</h2>
           <label for="tel-field">
-            <span>Контактный телефон*:</span>
-            <input type="tel" name="tel" id="tel-field" placeholder="Введите телефон" required>
+            <span class="contact-form__subitem">Контактный телефон*:</span>
+            <input type="tel" name="tel" id="tel-field" class="tel-form" value="Введите телефон" required>
           </label>
           <label for="email-field">
-            <span>Электронная почта*:</span>
-            <input type="email" name="email" id="email-field" class="email-form" placeholder="Введите e-mail" required>
+            <span class="contact-form__subitem">Электронная почта*:</span>
+            <input type="email" name="email" id="email-field" class="email-form" value="Введите e-mail" required>
           </label>
         </div>
         <div class="opinion-form">
           <h2 class="opinion-form__title">Ваше общее впечатление:</h2>
           <label for="opinion-field">
-            <span class="visually-hidden">Скорее положительное</span>
-            <input type="radio" name="opinon" id="opinion-field" value="positive">Скорее положительное
+            <input type="radio" name="opinon" id="opinion-field" value="positive" checked>
+            <span class="opinion-form__text">Скорее положительное</span>
           </label>
           <label for="opinion-field">
-            <span class="visually-hidden">Скорее отрицательное</span>
-            <input type="radio" name="opinon" id="opinion-field" value="negative">Скорее отрицательное
+            <input type="radio" name="opinon" id="opinion-field" value="negative">
+            <span class="opinion-form__text">Скорее отрицательное</span>
           </label>
           <label for="opinion-field">
-            <span class="visually-hidden">Затрудняюсь ответить</span>
-            <input type="radio" name="opinon" id="opinion-field" value="unknown">Затрудняюсь ответить
+            <input type="radio" name="opinon" id="opinion-field" value="unknown">
+            <span class="opinion-form__text">Затрудняюсь ответить</span>
           </label>
         </div>
         <div class="attractions-form">
@@ -112,10 +113,12 @@
           <h2 class="emotions-form__title">Опишите свои эмоции:</h2>
           <label for="txt-form">
             <span class="visually-hidden">Свободное поле</span>
-            <textarea class="txt-form" id="txt-form" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
+            <textarea class="txt-form" id="txt-form" cols="30" rows="10">
+              Опишите подробно все свои восторги
+            </textarea>
           </label>
         </div>
-        <input class="button-form" type="submit" value="Отправить отзыв">
+        <input class="emotions__button button" type="submit" value="Отправить отзыв">
         <p class="forms__text">
           * &ndash; Обязательные поля
         </p>
@@ -127,20 +130,33 @@
     <ul class="page-footer__social social">
       <li class="social__item">
         <a href="#" aria-label="Твиттер" class="social__link social__link--twitter">
+          <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.3 0.166728C13 -0.333272 14.4 0.366728 15 1.26673C15.7 1.06673 16.4 0.766728 17.1 0.566728C17.1 1.36673 16.6 2.06673 16.2 2.26673C16.9 2.46673 17.5 1.76673 17.5 1.76673C17.3 2.76673 16.5 3.46673 15.9 3.76673C15.7 10.3667 12.6 14.7667 5.5 14.5667C5 14.5667 5.6 14.5667 5 14.5667C4.6 14.5667 0.7 14.1667 0 12.7667C2.3 12.9667 4 12.3667 4.8 11.6667C3.8 11.3667 2 11.1667 1.7 8.76673C2.1 8.86673 2.3 8.96673 3 8.86673C1.8 8.06673 0.4 7.36673 0.5 5.16673C0.8 5.46673 1.6 5.66673 1.9 5.66673C1.2 5.46673 -0.1 2.36673 1 0.866728C2.9 2.66673 4.8 4.36673 8.4 4.56673C8.5 2.26673 9.5 0.766728 11.3 0.166728Z" fill="white"/>
+          </svg>
         </a>
       </li>
       <li class="social__item">
         <a href="#" aria-label="Фейсбук" class="social__link social__link--facebook">
+          <svg width="9" height="19" viewBox="0 0 9 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.3 3.4C7.1 3.4 7.9 3.4 8.7 3.4C8.7 2.3 8.7 1.2 8.7 0C7.7 0 6.8 0 5.8 0C2.7 0.2 1.5 2.4 1.9 6.1H0V9.6H2C2 12.7 2 15.8 2 18.9C3.3 18.9 4.6 18.9 5.8 18.9C5.8 15.8 5.8 12.7 5.8 9.6H8.7V6.1H5.8C5.8 5.1 5.8 3.7 6.3 3.4Z" fill="white"/>
+          </svg>
         </a>
       </li>
       <li class="social__item">
         <a href="#" aria-label="Ютуб" class="social__link social__link--youtube">
+          <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.1 0H2.8C1.3 0 0 1.3 0 2.8V11.1C0 12.7 1.3 14 2.8 14H17.1C18.7 14 19.9 12.7 19.9 11.2V2.8C20 1.3 18.7 0 17.1 0ZM7 10.4V3.6L13.8 7L7 10.4Z" fill="white"/>
+          </svg>
         </a>
       </li>
     </ul>
     <div class="page-footer__copyright copyright">
-      <b class="copyright__text">Разработано:</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+      <p class="copyright__text">Разработано</p>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" fill="black"/>
+        </svg>
+      </a>
     </div>
   </footer>
 </body>
