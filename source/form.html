@@ -57,26 +57,26 @@
           <h2 class="person-form__title">Представьтесь:</h2>
             <label for="name-field">
               <span class="contact-form__subitem">Имя*:</span>
-              <input type="text" name="name" id="name-field" class="name-form" value="Петр" required>
+              <input type="text" name="name" id="name-field" class="person-form__field" value="Петр" required>
             </label>
             <label for="surname-field">
               <span class="contact-form__subitem">Фамилия*:</span>
-              <input type="text" name="surname" id="surname-field" class="surname-form" value="Иванов" required>
+              <input type="text" name="surname" id="surname-field" class="person-form__field" value="Иванов" required>
             </label>
             <label for="middlename-field">
               <span class="contact-form__subitem">Отчество</span>
-              <input type="text" name="middlename" id="middlename-field" class="middlename-form" value="Александрович" required>
+              <input type="text" name="middlename" id="middlename-field" class="person-form__field" value="Александрович" required>
             </label>
         </div>
         <div class="contact-form">
           <h2 class="contact-form__title">Контактная информация:</h2>
           <label for="tel-field">
             <span class="contact-form__subitem">Контактный телефон*:</span>
-            <input type="tel" name="tel" id="tel-field" class="tel-form" value="Введите телефон" required>
+            <input type="tel" name="tel" id="tel-field" class="contact-form__field contact-form__field--tel" value="Введите телефон" required>
           </label>
           <label for="email-field">
             <span class="contact-form__subitem">Электронная почта*:</span>
-            <input type="email" name="email" id="email-field" class="email-form" value="Введите e-mail" required>
+            <input type="email" name="email" id="email-field" class="contact-form__field contact-form__field--email" value="Введите e-mail" required>
           </label>
         </div>
         <div class="opinion-form">
@@ -113,13 +113,11 @@
           <h2 class="emotions-form__title">Опишите свои эмоции:</h2>
           <label for="txt-form">
             <span class="visually-hidden">Свободное поле</span>
-            <textarea class="txt-form" id="txt-form" cols="30" rows="10">
-              Опишите подробно все свои восторги
-            </textarea>
+            <textarea class="emotions-form__txt" id="txt-form" cols="30" rows="10">Опишите подробно все свои восторги</textarea>
           </label>
         </div>
         <input class="emotions__button button" type="submit" value="Отправить отзыв">
-        <p class="forms__text">
+        <p class="emotions-form__subitem">
           * &ndash; Обязательные поля
         </p>
       </div>
