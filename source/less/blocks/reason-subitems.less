@@ -1,4 +1,15 @@
+.reason-subitems {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    text-align: center;
+  }
+}
+
 .reason-subitem__title {
+  margin: 0;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
@@ -6,6 +17,7 @@
 }
 
 .reason-subitem__description {
+  margin: 0;
   font-size: 14px;
   line-height: 21px;
   color: @dark;

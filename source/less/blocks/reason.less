@@ -1,4 +1,7 @@
 .reason__content {
+  min-height: 191px;
+  text-align: center;
+
   &--blue {
     background-color: @blue;
   }
@@ -6,12 +9,29 @@
   &--gray {
     background-color: @gray;
   }
+
+  @media (min-width: @tablet-width) {
+    width: 256px;
+    min-height: 256px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 400px;
+    min-height: 256px;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .reason__content--first {
+    min-height: 211px;
+  }
 }
 
 .reason__title {
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
+  margin: 0;
 
   &--white {
     color: @white;
@@ -25,6 +45,7 @@
 .reason__number {
   font-size: 14px;
   line-height: 21px;
+  margin: 0;
 
   &--white {
     color: @white;
@@ -38,6 +59,7 @@
 .reason__description {
   font-size: 14px;
   line-height: 21px;
+  margin: 0;
 
   &--white {
     color: @white;

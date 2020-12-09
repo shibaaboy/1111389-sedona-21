@@ -4,8 +4,16 @@
 }
 
 .page__body {
+  width: 320px;
   min-height: 100%;
-  margin: 0;
+  margin: 0 auto;
   background-color: @white;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    width: 768px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 1200px;
+  }
 }
