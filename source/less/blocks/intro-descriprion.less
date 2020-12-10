@@ -1,5 +1,4 @@
 .intro-description__title {
-  width: 300px;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
@@ -11,7 +10,6 @@
 }
 
 .intro-description__reasons {
-  width: 285px;
   font-size: 14px;
   line-height: 26px;
   color: @dark;
@@ -24,9 +22,13 @@
 
 .intro-description__text {
   font-size: 14px;
-  line-height: 24px;
+  line-height: 26px;
   color: @dark;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 542px;
+  }
 }
 
 .intro-description {

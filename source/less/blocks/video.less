@@ -1,4 +1,18 @@
+.video {
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 124px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    width: 500px;
+  }
+}
+
 .video__title {
+  margin: 0;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
@@ -6,6 +20,7 @@
 }
 
 .video__description {
+  margin: 0;
   font-size: 14px;
   line-height: 24px;
   color: @dark;
