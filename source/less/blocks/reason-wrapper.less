@@ -1,11 +1,6 @@
 .reason-wrapper__inner {
   display: flex;
   flex-direction: column;
-  text-align: center;
-
-  @media (min-width: @tablet-width) {
-    flex-direction: row;
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -14,8 +9,8 @@
   }
 }
 
-.reason-subitem--souvenir {
-  @media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
+  .reason-subitem--souvenir {
     order: 2;
   }
 }

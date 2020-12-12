@@ -1,9 +1,13 @@
-.reason-subitems {
+.reason-subitem {
   display: flex;
   flex-direction: column;
+}
 
-  @media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) {
+  .reason-subitems {
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
     text-align: center;
   }
 }
@@ -17,8 +21,13 @@
 }
 
 .reason-subitem__description {
+  width: 185px;
   margin: 0;
   font-size: 14px;
   line-height: 21px;
   color: @dark;
+}
+
+.reason-subitems__item--souvenir {
+  order: 1;
 }
