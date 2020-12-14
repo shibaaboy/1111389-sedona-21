@@ -1,4 +1,21 @@
+.photo {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    background-color: @lightgray;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @black;
+  }
+}
+
 .photo__title {
+  margin: 0;
   font-weight: bold;
   font-size: 14px;
   line-height: 24px;
@@ -6,12 +23,18 @@
 }
 
 .photo__author {
+  margin: 0;
   font-size: 14px;
   line-height: 24px;
   color: @dark;
+  text-transform: none;
 }
 
 .photo__number {
+  position: absolute;
+  bottom: -3px;
+  left: 38px;
+  margin: 0;
   font-weight: bold;
   font-size: 14px;
   line-height: 24px;
