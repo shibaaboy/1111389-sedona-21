@@ -57,58 +57,60 @@
         <div class="person-form">
           <h2 class="person-form__title">Представьтесь:</h2>
             <label for="name-field">
-              <span class="contact-form__subitem">Имя*:</span>
+              <span class="person-form__subitem">Имя*:</span>
               <input type="text" name="name" id="name-field" class="person-form__field" value="Петр" required>
             </label>
             <label for="surname-field">
-              <span class="contact-form__subitem">Фамилия*:</span>
+              <span class="person-form__subitem">Фамилия*:</span>
               <input type="text" name="surname" id="surname-field" class="person-form__field" value="Иванов" required>
             </label>
             <label for="middlename-field">
-              <span class="contact-form__subitem">Отчество</span>
+              <span class="person-form__subitem">Отчество:</span>
               <input type="text" name="middlename" id="middlename-field" class="person-form__field" value="Александрович" required>
             </label>
         </div>
         <div class="contact-form">
           <h2 class="contact-form__title">Контактная информация:</h2>
-          <label for="tel-field">
-            <span class="contact-form__subitem">Контактный телефон*:</span>
-            <input type="tel" name="tel" id="tel-field" class="contact-form__field contact-form__field--tel" value="Введите телефон" required>
-          </label>
-          <label for="email-field">
-            <span class="contact-form__subitem">Электронная почта*:</span>
-            <input type="email" name="email" id="email-field" class="contact-form__field contact-form__field--email" value="Введите e-mail" required>
-          </label>
+            <label for="tel-field">
+              <span class="contact-form__subitem">Контактный телефон*:</span>
+              <input type="tel" name="tel" id="tel-field" class="contact-form__field contact-form__field--tel" value="Введите телефон" required>
+            </label>
+            <label for="email-field">
+              <span class="contact-form__subitem">Электронная почта*:</span>
+              <input type="email" name="email" id="email-field" class="contact-form__field contact-form__field--email" value="Введите e-mail" required>
+            </label>
         </div>
         <div class="opinion-form">
           <h2 class="opinion-form__title">Ваше общее впечатление:</h2>
           <label for="opinion-field">
-            <input type="radio" name="opinon" id="opinion-field" value="positive" checked>
+            <input type="radio" name="opinon" id="opinion-field" class="opinion-form__checkbox" value="positive" checked>
             <span class="opinion-form__text">Скорее положительное</span>
           </label>
           <label for="opinion-field">
-            <input type="radio" name="opinon" id="opinion-field" value="negative">
+            <input type="radio" name="opinon" id="opinion-field" class="opinion-form__checkbox" value="negative">
             <span class="opinion-form__text">Скорее отрицательное</span>
           </label>
           <label for="opinion-field">
-            <input type="radio" name="opinon" id="opinion-field" value="unknown">
+            <input type="radio" name="opinon" id="opinion-field" class="opinion-form__checkbox" value="unknown">
             <span class="opinion-form__text">Затрудняюсь ответить</span>
           </label>
         </div>
         <div class="attractions-form">
           <h2 class="attractions-form__title">Посещенные достопримечательности:</h2>
-          <label for="bridge">
-            <input type="checkbox" name="bridge" id="bridge" checked><span class="checkbox-indicator"></span>Мост Дьявола
-          </label>
-          <label for="mountain">
-            <input type="checkbox" name="mountain" id="mountain" checked><span class="checkbox-indicator"></span>Гора-Колокол
-          </label>
-          <label for="park">
-            <input type="checkbox" name="park" id="park" checked><span class="checkbox-indicator"></span>Слайд-парк
-          </label>
-          <label for="rocks">
-            <input type="checkbox" name="rocks" id="rocks"><span class="checkbox-indicator"></span>Красные скалы
-          </label>
+          <div class="attractions-form__choise-wrapper">
+            <label for="bridge">
+              <input type="checkbox" name="bridge" id="bridge" class="attractions-form__checkbox" checked><span class="checkbox-indicator"></span>Мост Дьявола
+            </label>
+            <label for="mountain">
+              <input type="checkbox" name="mountain" id="mountain" class="attractions-form__checkbox" checked><span class="checkbox-indicator"></span>Гора-Колокол
+            </label>
+            <label for="park">
+              <input type="checkbox" name="park" id="park" class="attractions-form__checkbox" checked><span class="checkbox-indicator"></span>Слайд-парк
+            </label>
+            <label for="rocks">
+              <input type="checkbox" name="rocks" id="rocks" class="attractions-form__checkbox"><span class="checkbox-indicator"></span>Красные скалы
+            </label>
+          </div>
         </div>
         <div class="emotions-form">
           <h2 class="emotions-form__title">Опишите свои эмоции:</h2>

@@ -1,4 +1,11 @@
+.emotions-form {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+  }
+}
+
 .emotions-form__title {
+  text-align: center;
   margin: 0;
   font-weight: bold;
   font-size: 18px;
@@ -17,6 +24,11 @@
   color: @black;
   background-color: @lightgray;
   border: none;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 
 .emotions-form__subitem {

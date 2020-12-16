@@ -1,4 +1,27 @@
+.attractions-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  label {
+    display: flex;
+    flex-direction: row;
+    padding-right: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    color: @black;
+    text-transform: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin: 0 auto;
+  }
+}
+
 .attractions-form__title {
+  text-align: center;
   margin: 0;
   font-weight: bold;
   font-size: 18px;
@@ -6,12 +29,22 @@
   color: @black;
 }
 
-.attractions-form {
-  label {
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 26px;
-    color: @black;
-    text-transform: none;
+.attractions-form__checkbox {
+  margin-right: 20px;
+}
+
+.attractions-form__choise-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 160px;
+    padding-right: 130px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
   }
 }

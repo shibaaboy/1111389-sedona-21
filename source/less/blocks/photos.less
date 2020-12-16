@@ -1,1 +1,11 @@
-// стили
+.photos__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    padding: 0 60px;
+  }
+}
