@@ -1,4 +1,23 @@
+.opinion-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  label {
+    display: flex;
+    flex-direction: row;
+    padding-right: 5px;
+    margin-top: 10px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    order: -1;
+  }
+}
+
 .opinion-form__title {
+  text-align: center;
   margin: 0;
   font-weight: bold;
   font-size: 18px;
@@ -12,4 +31,8 @@
   font-size: 18px;
   line-height: 26px;
   text-transform: none;
+}
+
+.opinion-form__checkbox {
+  margin-right: 20px;
 }

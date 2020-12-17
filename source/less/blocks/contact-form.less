@@ -1,4 +1,22 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    padding-right: 5px;
+    margin-top: 10px;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
 .contact-form__title {
+  text-align: center;
   margin: 0;
   font-weight: bold;
   font-size: 18px;
@@ -7,8 +25,8 @@
 }
 
 .contact-form__field {
-  margin: 0;
-  width: 280px;
+  display: flex;
+  width: 100%;
   min-height: 58px;
   background-color: @lightgray;
   border: none;
