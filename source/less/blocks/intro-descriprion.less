@@ -1,11 +1,17 @@
 .intro-description__title {
+  padding-top: 32px;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
   margin: 0;
 
   @media (min-width: @tablet-width) {
+    padding-top: 43px;
     width: 542px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 55px;
   }
 }
 
@@ -14,6 +20,7 @@
   line-height: 26px;
   color: @dark;
   margin: 0;
+  margin-top: 30px;
 
   @media (min-width: @tablet-width) {
     width: 542px;
@@ -42,4 +49,8 @@
     margin: 0 auto;
     width: 484px;
   }
+}
+
+.intro-description__wrapper {
+  margin-bottom: 11px;
 }

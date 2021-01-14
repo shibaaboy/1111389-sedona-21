@@ -4,10 +4,17 @@
 }
 
 .reason-subitems {
+  margin-top: 9px;
+  margin-bottom: 35px;
+  padding-left: 69px;
+  padding-right: 11px;
+
   @media (min-width: @tablet-width) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding: 0;
+    margin: 158px 31px 60px 35px;
     text-align: center;
   }
 }
@@ -21,11 +28,21 @@
 }
 
 .reason-subitem__description {
-  width: 185px;
   margin: 0;
+  padding-top: 10px;
   font-size: 14px;
   line-height: 21px;
   color: @dark;
+}
+
+.reason-subitems__item {
+  padding-top: 26px;
+
+  @media (min-width: @tablet-width) {
+    width: 33.3%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 }
 
 .reason-subitems__item--souvenir {

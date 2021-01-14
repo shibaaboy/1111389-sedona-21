@@ -3,7 +3,6 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin-bottom: 15px;
   width: 100%;
 
   @media (min-width: @tablet-width) {
@@ -23,19 +22,21 @@
 
 .photo__title {
   margin: 0;
+  padding-top: 12px;
   font-weight: bold;
   font-size: 14px;
   line-height: 24px;
   color: @black;
 
   @media (min-width: @desktop-width) {
-    font-weight: 400;
+    font-weight: 700;
     color: @white;
   }
 }
 
 .photo__author {
   margin: 0;
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 24px;
   color: @dark;
@@ -47,10 +48,10 @@
 }
 
 .photo__number {
-  position: absolute;
-  bottom: -3px;
-  left: 38px;
-  margin: 0;
+  margin: 28px 20px 0 10px;
+  margin-top: 28px;
+  margin-right: 20px;
+  margin-left: 8px;
   font-weight: bold;
   font-size: 14px;
   line-height: 24px;
@@ -65,11 +66,30 @@
   background-color: @white;
 
   @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
     background-color: @lightgray;
   }
 
   @media (min-width: @desktop-width) {
-    margin-top: -72px;
+    margin-top: -80px;
     background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.photo__first-block {
+  @media (min-width: @desktop-width) {
+    margin-left: 21px;
+  }
+}
+
+.photo__second-block {
+  display: flex;
+
+  svg {
+    margin-top: 28px;
+    margin-bottom: 31px;
   }
 }

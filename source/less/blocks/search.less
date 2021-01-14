@@ -1,6 +1,11 @@
 .search {
   min-height: 120px;
   text-align: center;
+  margin-top: 33px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 58px;
+  }
 }
 
 .search__title {
@@ -14,6 +19,18 @@
 .search__description {
   font-size: 14px;
   line-height: 24px;
-  color: @dark;
+  color: #333333;
   margin: 0;
+  margin-top: 10px;
+  margin-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 37px;
+    padding: 0 167px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 42px;
+    padding: 0 382px;
+  }
 }
