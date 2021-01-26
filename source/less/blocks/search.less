@@ -1,19 +1,42 @@
 .search {
   min-height: 120px;
   text-align: center;
+  margin-top: 33px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 58px;
+  }
 }
 
 .search__title {
+  display: block;
   margin: 0;
+  padding-top: 2px;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    margin-top: -4px;
+  }
 }
 
 .search__description {
   font-size: 14px;
   line-height: 24px;
-  color: @dark;
+  color: #333333;
   margin: 0;
+  padding: 21px 22px 28px 23px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 37px;
+    padding: 35px 167px 0 167px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 42px;
+    padding: 35px 382px 0 382px;
+  }
 }
