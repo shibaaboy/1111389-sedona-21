@@ -1,19 +1,26 @@
 .video {
+  margin: 0 auto;
   position: relative;
-  margin-top: 47px;
   text-align: center;
+  margin-bottom: 49px;
 
   @media (min-width: @tablet-width) {
-    padding: 0 124px;
+    width: 648px;
+    margin: 0;
+    margin-bottom: 40px;
   }
 
   @media (min-width: @desktop-width) {
-    margin: 62px auto;
-    width: 500px;
+    width: 800px;
+    margin-bottom: 85px;
   }
 }
 
+// width: 100%; для картинки
+
 .video__title {
+  padding-top: 10px;
+  padding-left: 3px;
   margin: 0;
   font-weight: bold;
   font-size: 18px;
@@ -21,31 +28,64 @@
   color: @black;
 
   @media (min-width: @tablet-width) {
-    font-size: 21px;
-  }
-
-  @media (min-width: @desktop-width) {
+    padding-top: 57px;
     font-size: 30px;
-    line-height: 26px;
+    margin-left: -4px;
   }
 }
 
 .video__description {
+  padding: 28px 22px 0 25px;
   margin: 0;
-  padding-top: 15px;
   font-size: 14px;
   line-height: 24px;
   color: @dark;
+
+  @media (min-width: @tablet-width) {
+    padding: 35px 22px 0 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 33px 177px 0 177px;
+  }
+}
+
+.video__wrapper {
+  padding-top: 34px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 78px;
+  }
+
+  img {
+    @media (min-width: @tablet-width) {
+      width: 100%;
+    }
+  }
 }
 
 .video__controls {
-  position: absolute;
-  bottom: -62px;
-  left: 20px;
+  position: relative;
+  top: -4px;
   width: 280px;
   height: 66px;
   margin: 0 auto;
-  background-color: @lightgray;
+  background-color: #f2f2f2;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 93px;
+    vertical-align: middle;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: -93px;
+  }
+}
+
+.video__btns {
+  position: relative;
 }
 
 .video__time {
@@ -57,13 +97,18 @@
   background-color: rgba(0, 0, 0, 0.6);
 
   @media (min-width: @tablet-width) {
-    left: 60px;
-    width: 648px;
-    min-height: 93px;
+    position: relative;
+    bottom: unset;
+    left: unset;
+    width: 389px;
+    height: 20px;
+    background-color: transparent;
+    margin: 0;
+    min-height: unset;
   }
 }
 
-.time-line {
+.video__time-line {
   position: absolute;
   top: 22px;
   left: 22px;
@@ -73,53 +118,90 @@
 
   @media (min-width: @tablet-width) {
     width: 389px;
-    top: 45px;
+    top: 8px;
     left: 93px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 540px;
   }
 }
 
-.time-cirle {
+.video__cirle-btn {
   position: absolute;
-  top: 17px;
-  left: 56px;
-  width: 13px;
-  height: 13px;
-  background-color: @white;
-  border-radius: 50%;
+  left: 57px;
+  top: 19px;
+  width: 16px;
+  height: 20px;
+  font-size: 0;
+  background-color: transparent;
+  background-image: url("../img/volume-slider.svg");
+  background-repeat: no-repeat;
+  border: none;
   cursor: pointer;
 
   @media (min-width: @tablet-width) {
-    top: 40px;
-    left: 204px;
+    top: 5px;
+    left: 205px;
   }
 }
 
-.repeat__btn {
+.video__repeat-btn {
   position: absolute;
-  top: 22px;
   left: 25px;
+  top: 22px;
   width: 16px;
   height: 20px;
-  background-color: @dark;
+  font-size: 0;
+  background-color: transparent;
+  background-image: url("../img/replay.svg.svg");
+  background-repeat: no-repeat;
   border: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    left: 35px;
+    top: 35px;
+    background-image: url("../img/replay-white.svg.svg");
+  }
 }
 
-.subtitiles__btn {
+.video__subtitiles-btn {
   position: absolute;
-  top: 23px;
   right: 74px;
+  top: 23px;
   width: 32px;
   height: 20px;
-  background-color: @dark;
+  font-size: 0;
+  background-color: transparent;
+  background-image: url("../img/subtitles.svg.svg");
+  background-repeat: no-repeat;
   border: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    right: 92px;
+    top: 36px;
+    background-image: url("../img/subtitles-white.svg.svg");
+  }
 }
 
-.fullscreen__btn {
+.video__fullscreen-btn {
   position: absolute;
-  top: 23px;
   right: 23px;
+  top: 23px;
   width: 20px;
   height: 20px;
-  background-color: @dark;
+  font-size: 0;
+  background-color: transparent;
+  background-image: url("../img/fullscreen.svg.svg");
+  background-repeat: no-repeat;
   border: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    right: 41px;
+    top: 36px;
+    background-image: url("../img/fullscreen-white.svg.svg");
+  }
 }

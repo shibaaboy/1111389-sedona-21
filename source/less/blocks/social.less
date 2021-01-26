@@ -3,22 +3,33 @@
   padding: 0;
   margin: 0;
   margin-top: 33px;
-  margin-bottom: 45px;
+  margin-bottom: 44px;
 
   @media (min-width: @tablet-width) {
-    margin-top: 36px;
+    margin-top: 32px;
     margin-bottom: 36px;
   }
 }
 
 .social__item {
   list-style: none;
+  margin-right: 6px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 7px;
+  }
+
+  &:last-child {
+    @media (max-width: @mobile-width-only) {
+      margin-right: 0;
+    }
+  }
 }
 
 .social__link {
   display: block;
   position: relative;
-  margin-right: 10px;
+  margin: 0;
   background-color: @blue;
   width: 46px;
   height: 48px;

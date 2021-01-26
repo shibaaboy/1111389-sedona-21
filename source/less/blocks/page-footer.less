@@ -12,7 +12,9 @@
 }
 
 .page-footer__hashtag {
-  margin-top: 28px;
+  margin: 0;
+  padding-top: 25px;
+  padding-right: 1px;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
@@ -21,9 +23,24 @@
 
   @media (min-width: @tablet-width) {
     margin-top: 0;
+    padding: 0;
+    padding-left: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 119px;
   }
 }
 
 .page-footer__copyright {
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 59px;
+    padding-top: 4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-right: 119px;
+  }
 }

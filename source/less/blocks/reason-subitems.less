@@ -14,37 +14,120 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0;
-    margin: 158px 31px 60px 35px;
+    margin: 0;
     text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 21px;
   }
 }
 
 .reason-subitem__title {
   margin: 0;
+  padding-left: 1px;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+  }
 }
 
 .reason-subitem__description {
   margin: 0;
-  padding-top: 10px;
+  padding-top: 16px;
   font-size: 14px;
   line-height: 21px;
   color: @dark;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 24px;
+  }
 }
 
 .reason-subitems__item {
+  position: relative;
   padding-top: 26px;
 
   @media (min-width: @tablet-width) {
     width: 33.3%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 158px 20px 59px 20px;
   }
-}
 
-.reason-subitems__item--souvenir {
-  order: 1;
+  &--house {
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 17px;
+      left: -48px;
+      width: 40px;
+      height: 37px;
+      background-image: url("../img/icon-house.svg.svg");
+      background-repeat: no-repeat;
+
+      @media (min-width: @tablet-width) {
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75px;
+        height: 72px;
+        background-image: url("../img/icon-house-tablet.svg");
+      }
+    }
+  }
+
+  &--souvenir {
+    order: 1;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 15px;
+      left: -44px;
+      width: 32px;
+      height: 38px;
+      background-image: url("../img/icon-gift.svg.svg");
+      background-repeat: no-repeat;
+
+      @media (min-width: @tablet-width) {
+        top: 57px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 64px;
+        height: 75px;
+        background-image: url("../img/icon-gift-desktop.svg");
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  &--food {
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      top: 21px;
+      left: -51px;
+      width: 40px;
+      height: 35px;
+      background-image: url("../img/icon-burger.svg.svg");
+      background-repeat: no-repeat;
+
+      @media (min-width: @tablet-width) {
+        top: 63px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 76px;
+        height: 72px;
+        background-image: url("../img/icon-burger-desktop.svg");
+        background-repeat: no-repeat;
+      }
+    }
+  }
 }
