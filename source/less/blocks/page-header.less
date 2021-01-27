@@ -1,14 +1,26 @@
 .page-header {
-  display: flex;
-  flex-direction: column-reverse;
-  padding: 15px 0;
+  background-color: #ffffff;
+  position: relative;
+  min-height: 56px; 
 }
 
 .page-header__logo {
-  min-height: 84px;
+  cursor: pointer;
+  width: 102px;
+  height: 84px;
+  display: block;
   position: absolute;
-  top: 0;
+  z-index: 2;
+  bottom: -28px;
   left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
+  transform: translate(-50%, 0); 
+
+  @media (min-width: 768px) {
+    top: 0; 
+  }
+
+  @media (min-width: 1200px) {
+    width: 187px;
+    height: 97px; 
+    } 
 }

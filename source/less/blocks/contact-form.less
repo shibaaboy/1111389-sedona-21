@@ -1,6 +1,10 @@
 .contact-form {
   display: flex;
   flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin-top: 45px;
+  padding: 0 20px;
 
   label {
     display: flex;
@@ -12,6 +16,31 @@
   @media (min-width: @tablet-width) {
     width: 100%;
     margin: 0 auto;
+    margin-top: 34px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    top: -20px;
+    left: 0px;
+    background-color: #e5e5e5;
+
+    @media (min-width: @tablet-width) {
+      width: 648px;
+      height: 1px;
+      left: 60px;
+      top: 10px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 960px;
+      left: 120px;
+      top: 7px;
+    }
   }
 }
 
@@ -22,48 +51,139 @@
   font-size: 18px;
   line-height: 26px;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    width: 402px;
+    margin: 0 auto;
+    background-color: @white;
+    z-index: 1;
+  }
 }
 
 .contact-form__field {
+  font-family: @basic-font;
   display: flex;
-  position: relative;
   width: 100%;
   min-height: 58px;
-  background-color: @lightgray;
+  padding-left: 20px;
+  padding-right: 22px;
+  background-color: #f2f2f2;
   border: none;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
-  color: @black;
+  color: #000000;
+  box-sizing: border-box;
 
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 58px;
-    height: 58px;
-    background-color: red;
+  &--tel {
+    margin-top: 11px;
+
+    @media (min-width: @tablet-width) {
+      width: 648px;
+      margin-left: 41px;
+      padding-top: 5px;
+      margin-top: 10px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: -43px;
+      margin-left: 27px;
+      width: 258px;
+      padding-left: 21px;
+    }
+  }
+
+  &--email {
+    margin-top: 5px;
+
+    @media (min-width: @tablet-width) {
+      margin-top: 6px;
+      width: 648px;
+      margin-left: 41px;
+      padding-top: 6px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-top: -44px;
+      margin-left: -18px;
+      width: 258px;
+      padding-left: 24px;
+    }
   }
 }
 
 .contact-form__subitem {
   position: relative;
   margin: 0;
+  margin-left: 22px;
+  margin-top: 5px;
   font-size: 14px;
   line-height: 26px;
-  color: @dark;
+  color: #333333;
 
-  &::after {
+  @media (min-width: @tablet-width) {
+    margin-left: 62px;
+    margin-top: 10px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -149px;
+    margin-top: 77px;
+  }
+
+  &--email {
+
+    @media (min-width: @tablet-width) {
+      margin-top: 13px;
+    }
+    
+    @media (min-width: @desktop-width) {
+      margin-left: -179px;
+      margin-top: 77px;
+    }
+  }
+
+  &--tel::before {
     content: "";
     display: block;
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 37px;
+    right: -5px;
     width: 58px;
     height: 58px;
-    background-color: red;
+    background: #e6e6e6 url("../img/phone.svg.svg") no-repeat center;
+    
+    @media (min-width: @tablet-width) {
+      top: 35px;
+      right: 34px;
+    }
+    
+    @media (min-width: @desktop-width) {
+      top: -17px;
+      right: -57px;
+    }
+  }
+
+  &--email::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 31px;
+    right: -5px;
+    width: 58px;
+    height: 58px;
+    background: #e6e6e6 url("../img/mail.svg.svg") no-repeat center;
+
+    @media (min-width: @tablet-width) {
+      top: 32px;
+      right: 34px;
+    }
+
+    @media (min-width: @desktop-width) {
+      top: -17px;
+      right: -59px;
+    }
   }
 }
 

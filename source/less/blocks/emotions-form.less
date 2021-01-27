@@ -1,6 +1,41 @@
 .emotions-form {
+  position: relative;
+  width: 100%;
+  margin-top: 14px;
+  
   @media (min-width: @tablet-width) {
     width: 100%;
+    margin-top: 46px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 37px;
+    margin-bottom: 54px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 320px;
+    height: 1px;
+    top: -20px;
+    left: 0px;
+    background-color: #e5e5e5;
+    z-index: -1;
+
+    @media (min-width: @tablet-width) {
+      width: 648px;
+      height: 1px;
+      left: 60px;
+      top: 10px;
+    }
+
+    @media (min-width: @desktop-width) {
+      width: 960px;
+      left: 120px;
+      top: 9px;
+    }
   }
 }
 
@@ -11,23 +46,44 @@
   font-size: 18px;
   line-height: 26px;
   color: @black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
+    width: 402px;
+    margin: 0 auto;
+    background-color: @white;
+    z-index: 1;
+  }
 }
 
 .emotions-form__txt {
-  margin: 0;
+  margin: 14px 0 48px 20px;
+  padding: 15px 20px;
   width: 279px;
-  min-height: 160px;
-  font-family: @basic-font;
+  height: 160px;
+  font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
   font-size: 18px;
   line-height: 26px;
-  color: @black;
-  background-color: @lightgray;
+  color: #000000;
+  background-color: #f2f2f2;
   border: none;
+  box-sizing: border-box;
 
   @media (min-width: @tablet-width) {
-    margin: 0 auto;
-    width: 100%;
+    margin: 0;
+    margin-left: 60px;
+    margin-top: 57px;
+    width: 648px;
+    height: 160px;
+  } 
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+    height: 160px;
+    padding: 18px 20px;
+    margin: 0 120px;
+    margin-top: 54px;
   }
 }
 
@@ -37,4 +93,35 @@
   font-size: 14px;
   line-height: 26px;
   color: @dark;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-right: 61px;
+    margin-top: 71px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 0;
+    margin-right: 121px;
+    margin-top: 20px;
+  }
+}
+
+.emotions__button { 
+
+  @media (min-width: @tablet-width) {
+    width: 324px;
+    margin: 0;
+    margin-left: 60px;
+    margin-top: 52px;
+    padding-left: 21px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 480px;
+    margin-left: 120px;
+  }
 }
